@@ -72,7 +72,7 @@ const Form = () => {
                                 ),
                             }}
                             onChange={formData.handleChange}
-                            error={formData.touched.name && formData.errors.name}
+                            error={formData.touched.name && Boolean(formData.errors.name)}
                             helperText={formData.touched.name && formData.errors.name}
                         />
 
@@ -93,7 +93,7 @@ const Form = () => {
                                 ),
                             }}
                             onChange={formData.handleChange}
-                            error={formData.touched.address && formData.errors.address}
+                            error={formData.touched.address && Boolean(formData.errors.address)}
                             helperText={formData.touched.address && formData.errors.address}
                         />
 
@@ -105,7 +105,7 @@ const Form = () => {
                             variant='outlined'
                             select
                             onChange={formData.handleChange}
-                            error={formData.touched.country && formData.errors.country}
+                            error={formData.touched.country && Boolean(formData.errors.country)}
                             helperText={formData.touched.country && formData.errors.country}
                         >
                             <MenuItem value="" selected>Select Country</MenuItem>
